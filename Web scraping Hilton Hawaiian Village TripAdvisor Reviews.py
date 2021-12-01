@@ -97,7 +97,7 @@ def get_reviews_ids(soup):
     items = soup.find_all('div', attrs={'data-reviewid': True})
 
     if items:
-        reviews_ids = [x.attrs['data-reviewid'] for x in items][::2]
+        reviews_ids = [x.attrs['data-reviewid'] for x in items]
         print('[get_reviews_ids] data-reviewid:', reviews_ids)
         return reviews_ids
     
